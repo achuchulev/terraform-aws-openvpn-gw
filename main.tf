@@ -97,3 +97,9 @@ resource "aws_instance" "openvpn_gw" {
   associate_public_ip_address = true
   source_dest_check           = false
 }
+
+resource "aws_route" "subsidiary_network_route_add" {
+  route_table_id         = "${var.vpn_access_server_main_route_table_id}"
+  destination_cidr_block = "${var.vpc_cidr_block}"
+  instance_id            = "${var.vpn_access_server_instance_id}"
+}

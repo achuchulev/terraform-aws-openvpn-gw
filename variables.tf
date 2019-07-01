@@ -35,3 +35,8 @@ variable "ssh_cidr" {
 variable "ami" {
   default = "ami-0680fd63c2ddf7411" // ubuntu xenial openvpn gateway ami in eu-east-2
 }
+
+variable "vpn_access_server_main_route_table_id" {}
+
+variable "vpn_access_server_instance_id" {}
+

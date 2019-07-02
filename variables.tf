@@ -2,41 +2,36 @@ variable "aws_access_key" {}
 
 variable "aws_secret_key" {}
 
-variable "aws_region" {
+variable "vpn_gw_aws_region" {
   default = "us-east-2"
 }
 
-variable "instance_type" {
+variable "vpn_gw_instance_type" {
   default = "t2.micro"
 }
 
 variable "access_server_cidr_block" {}
 
-variable "vpc_cidr_block" {
+variable "vpn_gw_vpc_cidr_block" {
   default = "10.10.0.0/16"
 }
 
-variable "subnet_cidr_block" {
+variable "vpn_gw_subnet_cidr_block" {
   default = "10.10.0.0/16"
 }
 
-variable "ssh_user" {
+variable "vpn_gw_ssh_user" {
   default = "ubuntu"
 }
 
-variable "ssh_port" {
+variable "vpn_gw_ssh_port" {
   default = 22
 }
 
-variable "ssh_cidr" {
+variable "vpn_gw_ssh_cidr" {
   default = "0.0.0.0/0"
 }
 
-variable "ami" {
+variable "vpn_gw_ami" {
   default = "ami-0680fd63c2ddf7411" // ubuntu xenial openvpn gateway ami in eu-east-2
 }
-
-variable "vpn_access_server_main_route_table_id" {}
-
-variable "vpn_access_server_instance_id" {}
-

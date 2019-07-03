@@ -1,1 +1,1 @@
-# terraform-aws-openvpn-gw
+# Terraform configuration to create OpenVPN Linux Gateway client
